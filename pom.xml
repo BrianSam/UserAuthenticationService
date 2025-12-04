@@ -45,11 +45,11 @@
         </dependency>
 
         <!-- OAuth 2 Authorization Server (Spring Boot 3 compatible) -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-oauth2-authorization-server</artifactId>
-            <version>1.2.1</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.security</groupId>-->
+<!--            <artifactId>spring-security-oauth2-authorization-server</artifactId>-->
+<!--            <version>1.2.1</version>-->
+<!--        </dependency>-->
 
         <!-- PostgreSQL -->
         <dependency>

@@ -37,6 +37,7 @@ public class AuthController {
             return ResponseEntity.status(HttpStatus.CREATED).body(responseDto);
         } catch (Exception e) {
             responseDto.setStatus(SignupStatus.FAILURE);
+            responseDto.setMessage(e.getMessage());
             return new ResponseEntity<>(responseDto, HttpStatus.BAD_REQUEST);
         }
 
