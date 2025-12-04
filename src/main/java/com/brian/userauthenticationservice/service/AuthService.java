@@ -27,7 +27,7 @@ public class AuthService {
         Optional<User> user = userRepo.findByEmail(email);
         if (user.isPresent()) {
             if (bCryptPasswordEncoder.matches(password, user.get().getPassword())) {
-                return "token";
+                return user.get().getId().toString();
             }
             else{
                 throw new PasswordMismatchException("password does not match");
@@ -51,7 +51,7 @@ public class AuthService {
         newUser.setUsername(name);
         userRepo.save(newUser);
 
-        return  "token";
+        return  newUser.getId().toString();
 
     }
 }
